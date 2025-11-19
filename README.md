@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VibeThread - Home</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="main.js"></script>
-</head>
+  </head>
 <body>
   <header>
     <h1>Welcome to VibeThread</h1>
@@ -30,11 +22,12 @@
       <p id="shirtPreview"></p>
     </section>
 
-    <section>
+       <section>
       <h2>Shop by Style</h2>
       <button onclick="showStyles()">See Styles</button>
       <ul id="styleList"></ul>
-    </section>
+      </section>
+
   </main>
 
   <footer>
