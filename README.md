@@ -1,4 +1,33 @@
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VibeThread</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Optional if you use an external CSS file -->
+  
+  <script>
+    function customizeShirt() {
+      const text = document.getElementById("customText").value;
+      document.getElementById("shirtPreview").textContent = 
+        text ? `Your custom shirt will say: "${text}"` : "Please type something first!";
+    }
+
+    function showStyles() {
+      const styles = ["Streetwear", "Urban Art", "Minimalist", "Graphic Tees", "Vintage"];
+      const list = document.getElementById("styleList");
+
+      list.innerHTML = ""; // Clear old list
+
+      styles.forEach(style => {
+        const li = document.createElement("li");
+        li.textContent = style;
+        list.appendChild(li);
+      });
+    }
+  </script>
+</head>
+
 <body>
   <header>
     <h1>Welcome to VibeThread</h1>
@@ -14,19 +43,22 @@
   </header>
 
   <main>
+
     <section>
       <h2>Design Your Vibe</h2>
       <p>Customize your own shirt! Type your message below:</p>
+
       <input type="text" id="customText" placeholder="Enter your message">
       <button onclick="customizeShirt()">Create Shirt</button>
+
       <p id="shirtPreview"></p>
     </section>
 
-       <section>
+    <section>
       <h2>Shop by Style</h2>
       <button onclick="showStyles()">See Styles</button>
       <ul id="styleList"></ul>
-      </section>
+    </section>
 
   </main>
 
@@ -35,4 +67,3 @@
   </footer>
 </body>
 </html>
-
